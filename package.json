@@ -16,5 +16,8 @@
     "url": "https://github.com/ronokiri2/frontend-project-lvl1/issues"
   },
   "type": "module",
-  "homepage": "https://github.com/ronokiri2/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/ronokiri2/frontend-project-lvl1#readme",
+  "bin": {
+	"brain-games": "bin/brain-games.js"
+  }
 }
