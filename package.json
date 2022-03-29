@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/ronokiri2/frontend-project-lvl1/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/ronokiri2/frontend-project-lvl1#readme"
 }
