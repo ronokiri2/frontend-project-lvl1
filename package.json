@@ -18,6 +18,9 @@
   "type": "module",
   "homepage": "https://github.com/ronokiri2/frontend-project-lvl1#readme",
   "bin": {
-	"brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "brain-games": "^1.1.5"
   }
 }
