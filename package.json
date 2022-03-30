@@ -21,6 +21,7 @@
     "brain-games": "bin/brain-games.js"
   },
   "dependencies": {
-    "brain-games": "^1.1.5"
+    "brain-games": "^1.1.5",
+    "readline-sync": "^1.4.10"
   }
 }
