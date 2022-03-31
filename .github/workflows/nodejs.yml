@@ -36,6 +36,17 @@ jobs:
         # Add environment variables
         env:
           CI: true
+      
+      - name: Run brain-games
+        # Run Linter
+        run: |
+          make brain-games
+
+      - name: Run publish
+        # Run Linter
+        run: |
+          make publish
+
       - name: Run linter
         # Run Linter
         run: |
