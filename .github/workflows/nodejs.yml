@@ -31,7 +31,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install
         # Install project
-        run: |
+        run: 
           make install
         # Add environment variables
         env:
