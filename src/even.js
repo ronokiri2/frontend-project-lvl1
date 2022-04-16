@@ -20,8 +20,9 @@ const returnRandom = () => {
     const answer = readlineSync.question('Your answer: ');
 
     if (answer !== trueAnswer) {
-      console.log('no!');
-      correctAnswers = -1;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);

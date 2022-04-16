@@ -6,3 +6,7 @@
 
 
 ![example workflow](https://github.com/ronokiri2/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)
+
+
+brain-even
+<a href="https://asciinema.org/a/487997" target="_blank"><img src="https://asciinema.org/a/487997.svg" /></a>
