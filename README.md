@@ -10,3 +10,7 @@
 
 brain-even
 <a href="https://asciinema.org/a/487997" target="_blank"><img src="https://asciinema.org/a/487997.svg" /></a>
+
+
+brain-calc
+<a href="https://asciinema.org/a/6IGSxYgp0Zqf6OfB2TasLPYtO" target="_blank"><img src="https://asciinema.org/a/6IGSxYgp0Zqf6OfB2TasLPYtO.svg" /></a>
