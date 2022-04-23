@@ -14,3 +14,7 @@ brain-even
 
 brain-calc
 <a href="https://asciinema.org/a/6IGSxYgp0Zqf6OfB2TasLPYtO" target="_blank"><img src="https://asciinema.org/a/6IGSxYgp0Zqf6OfB2TasLPYtO.svg" /></a>
+
+
+brain-gcd
+<a href="https://asciinema.org/a/PakU8BTktIEHqVONLeVzBxxWL" target="_blank"><img src="https://asciinema.org/a/PakU8BTktIEHqVONLeVzBxxWL.svg" /></a>
