@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import printName from './index.js';
+import printName from '../index.js';
 
 const name = printName();
 
