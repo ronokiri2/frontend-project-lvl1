@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 import printName from '../index.js';
+import returnRandomNumber from '../utils.js';
 
 const name = printName();
 console.log('Find the greatest common divisor of given numbers.');
 
 const gcdGame = () => {
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    const maxNumber = 50;
-    const randomNumberA = Math.floor(Math.random() * maxNumber);
-    const randomNumberB = Math.floor(Math.random() * maxNumber);
+    const randomNumberA = returnRandomNumber(2, 100);
+    const randomNumberB = returnRandomNumber(2, 100);
     const question = `${randomNumberA} ${randomNumberB}`;
 
     const correctAnswer = (a, b) => {

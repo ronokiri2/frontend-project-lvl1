@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import printName from '../index.js';
+import returnRandomNumber from '../utils.js';
 
 const name = printName();
 
 const calcGame = () => {
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    const maxNumber = 10;
-    const randomNumberA = Math.floor(Math.random() * maxNumber);
-    const randomNumberB = Math.floor(Math.random() * maxNumber);
+    const randomNumberA = returnRandomNumber(1, 10);
+    const randomNumberB = returnRandomNumber(1, 10);
     const symbols = ['*', '+', '-'];
     const symbol = symbols[Math.floor(Math.random() * symbols.length)];
     const correctAnswerString = [randomNumberA, symbol, randomNumberB].join(' ');

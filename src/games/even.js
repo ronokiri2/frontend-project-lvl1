@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import returnRandomNumber from '../utils.js';
 
 const evenGame = () => {
   const name = readlineSync.question('May I have your name? ');
@@ -6,8 +7,8 @@ const evenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    const maxNumber = 100;
-    const randomNumber = Math.floor(Math.random() * maxNumber);
+    const randomNumber = returnRandomNumber(1, 100);
+
     let trueAnswer = 'start';
 
     if (randomNumber % 2 === 0) {

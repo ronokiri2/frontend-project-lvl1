@@ -1,24 +1,23 @@
 import readlineSync from 'readline-sync';
 import printName from '../index.js';
+import returnRandomNumber from '../utils.js';
 
 const name = printName();
 
 const primeGame = () => {
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    const min = 2;
-    const max = 100;
-    const random = Math.floor(Math.random() * (max - min) + min);
+    const randomNumber = returnRandomNumber(2, 100);
 
     const isPrime = () => {
-      for (let i = 2; i < random - 1; i += 1) {
-        if (random % i === 0) {
+      for (let i = 2; i < randomNumber - 1; i += 1) {
+        if (randomNumber % i === 0) {
           return 'no';
         }
       }
       return 'yes';
     };
 
-    console.log(`Question: ${random}`);
+    console.log(`Question: ${randomNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === isPrime()) {

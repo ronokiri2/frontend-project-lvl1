@@ -1,25 +1,15 @@
 import readlineSync from 'readline-sync';
 import printName from '../index.js';
+import returnRandomNumber from '../utils.js';
 
 const name = printName();
 
 const progressionGame = () => {
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    let min = 0;
-    let max = 10;
-    const randomFirstNumber = Math.floor(Math.random() * (max - min) + min);
-
-    min = 1;
-    max = 5;
-    const randomDelta = Math.floor(Math.random() * (max - min) + min);
-
-    min = 5;
-    max = 12;
-    const randomQuantityOfNumbers = Math.floor(Math.random() * (max - min) + min);
-
-    min = 1;
-    max = randomQuantityOfNumbers;
-    const randomPositionOfNumbers = Math.floor(Math.random() * (max - min) + min);
+    const randomFirstNumber = returnRandomNumber(0, 10);
+    const randomDelta = returnRandomNumber(1, 5);
+    const randomQuantityOfNumbers = returnRandomNumber(5, 12);
+    const randomPositionOfNumbers = returnRandomNumber(1, randomQuantityOfNumbers);
 
     let question = `${randomFirstNumber}`;
     let nextNumber = Number(randomFirstNumber);
