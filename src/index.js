@@ -1,7 +1,4 @@
 import readlineSync from 'readline-sync';
-// import { returnQuestionAndCorrectAnswer, instruction } from './games/prime.js';
-
-// нужно оставить цикл в индексе а запускать игру в файле с игрой или бинарке
 
 const play3Rounds = (returnQuestionAndCorrectAnswer, instruction) => {
   console.log('Welcome to the Brain Games!');
@@ -26,6 +23,4 @@ const play3Rounds = (returnQuestionAndCorrectAnswer, instruction) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-// play3Rounds();
 export default play3Rounds;
-// export { printName, play1Round, play3Rounds };

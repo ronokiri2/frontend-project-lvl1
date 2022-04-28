@@ -1,8 +1,6 @@
 import play3Rounds from '../index.js';
 import returnRandomNumber from '../utils.js';
 
-// const name = printName();
-
 const instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const returnQuestionAndCorrectAnswer = () => {
