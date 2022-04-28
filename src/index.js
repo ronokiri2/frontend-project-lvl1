@@ -13,7 +13,6 @@ const play3Rounds = (returnQuestionAndCorrectAnswer, instruction) => {
   for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
     const [question, correctAnswer] = returnQuestionAndCorrectAnswer();
     console.log(`Question: ${question}`);
-    console.log(`correctAnswer: ${correctAnswer}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
@@ -22,9 +21,9 @@ const play3Rounds = (returnQuestionAndCorrectAnswer, instruction) => {
       return;
     }
 
-    console.log('Correct');
+    console.log('Correct!');
   }
-  console.log('3 rounds ended');
+  console.log(`Congratulations, ${name}!`);
 };
 
 // play3Rounds();
