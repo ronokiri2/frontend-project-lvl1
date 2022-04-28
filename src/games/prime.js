@@ -1,33 +1,37 @@
-import readlineSync from 'readline-sync';
-import printName from '../index.js';
+import play3Rounds from '../index.js';
 import returnRandomNumber from '../utils.js';
 
-const name = printName();
+// const name = printName();
 
-const primeGame = () => {
-  for (let correctAnswers = 0; correctAnswers < 3; correctAnswers += 1) {
-    const randomNumber = returnRandomNumber(2, 100);
+const instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    const isPrime = () => {
-      for (let i = 2; i < randomNumber - 1; i += 1) {
-        if (randomNumber % i === 0) {
-          return 'no';
-        }
-      }
-      return 'yes';
-    };
+const returnQuestionAndCorrectAnswer = () => {
+  const question = returnRandomNumber(2, 100);
+  let correctAnswer;
+  console.log(question);
 
-    console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    if (userAnswer === isPrime()) {
-      console.log(`Congratulations, ${name}!`);
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isPrime()}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
+  for (let i = 2; i < question - 1; i += 1) {
+    console.log(i);
+    if (question % i === 0) {
+      console.log('correct answer is NO');
+      correctAnswer = 'no';
+      return [question, correctAnswer];
     }
   }
+  console.log('correct answer is yes');
+  correctAnswer = 'yes';
+  return [question, correctAnswer];
+};
+// const randomNumber = () => {
+//   const rr = returnRandomNumber(2, 100);
+//   console.log(rr);
+//   return rr;
+// };
+// const primeGame = () => {
+//   play3Rounds(returnQuestionAndCorrectAnswer(), name);
+// };
+const primeGame = () => {
+  play3Rounds(returnQuestionAndCorrectAnswer, instruction);
 };
 
 export default primeGame;
