@@ -1,24 +1,16 @@
-import play3Rounds from '../index.js';
-import returnRandomNumber from '../utils.js';
+import playRounds from '../index.js';
+import { returnRandomNumber, isPrime } from '../utils.js';
 
 const instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const returnQuestionAndCorrectAnswer = () => {
+const getQuestionAndCorrectAnswer = () => {
   const question = returnRandomNumber(2, 100);
-  let correctAnswer;
-
-  for (let i = 2; i < question - 1; i += 1) {
-    if (question % i === 0) {
-      correctAnswer = 'no';
-      return [question, correctAnswer];
-    }
-  }
-  correctAnswer = 'yes';
+  const correctAnswer = isPrime(question);
   return [question, correctAnswer];
 };
 
 const primeGame = () => {
-  play3Rounds(returnQuestionAndCorrectAnswer, instruction);
+  playRounds(getQuestionAndCorrectAnswer, instruction);
 };
 
 export default primeGame;
