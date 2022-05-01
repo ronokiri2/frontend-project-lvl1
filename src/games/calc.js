@@ -5,20 +5,21 @@ const instruction = 'What is the result of the expression?';
 const getQuestionAndCorrectAnswer = () => {
   const randomNumberA = returnRandomNumber(1, 10);
   const randomNumberB = returnRandomNumber(1, 10);
-  const symbol = returnRandomNumber(1, 3);
+  const symbols = ['*', '+', '-'];
+  const symbol = symbols[Math.floor(Math.random() * symbols.length)];
 
   let question;
   let correctAnswer;
   switch (symbol) {
-    case 1:
+    case '*':
       question = [randomNumberA, '*', randomNumberB].join(' ');
       correctAnswer = String(randomNumberA * randomNumberB);
       break;
-    case 2:
+    case '-':
       question = [randomNumberA, '-', randomNumberB].join(' ');
       correctAnswer = String(randomNumberA - randomNumberB);
       break;
-    case 3:
+    case '+':
       question = [randomNumberA, '+', randomNumberB].join(' ');
       correctAnswer = String(randomNumberA + randomNumberB);
       break;
