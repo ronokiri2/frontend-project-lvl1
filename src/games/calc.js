@@ -1,5 +1,5 @@
 import playRounds from '../index.js';
-import { returnRandomNumber } from '../utils.js';
+import returnRandomNumber from '../utils.js';
 
 const instruction = 'What is the result of the expression?';
 const getQuestionAndCorrectAnswer = () => {

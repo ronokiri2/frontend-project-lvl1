@@ -1,5 +1,5 @@
 import playRounds from '../index.js';
-import { returnRandomNumber } from '../utils.js';
+import returnRandomNumber from '../utils.js';
 
 const instruction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
